@@ -1,26 +1,29 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
+    /* === Sistema de Módulos e Plataforma === */
+    "target": "ES2020",
+    "module": "CommonJS",               // Usa ESM (import/export)
+    "moduleResolution": "node",            // Resolve módulos como o Node
+    "lib": ["ES2020", "DOM"],              // Inclui libs do DOM (por causa do TSX React)
+    "types": ["node"],                     // Adiciona tipos do Node.js
+
+    /* === Caminhos e Saída === */
+    "rootDir": "./",                       // Raiz do projeto
+    "outDir": "./dist",                    // Pasta de saída da build
+    "esModuleInterop": true,               // Permite importações padrão (ex: import express from 'express')
+    "resolveJsonModule": true,             // Permite importar JSONs
+    "skipLibCheck": true,                  // Ignora checagem de tipos de libs para compilar mais rápido
+
+    /* === Verificações e Segurança === */
+    "strict": true,                        // Ativa modo estrito do TypeScript
+    "forceConsistentCasingInFileNames": true
   },
   "include": [
-    "src"
+    "server.ts",
+    "Receipt.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
   ]
 }
