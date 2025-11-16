@@ -1,8 +1,13 @@
 import type { Request, Response } from 'express'; 
 import express from 'express'; // importa só os tipos corretamente
+import cors from 'cors';
+
+import router from './src/routes/index';
 
 const app = express();
 const PORT = process.env.PORT ? Number(process.env.PORT) : 3000;
+
+app.use(cors());
 
 // Conteúdo do arquivo Receipt.tsx que será baixado
 const receiptTsx = `teste de arquivo`;

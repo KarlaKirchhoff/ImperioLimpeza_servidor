@@ -20,9 +20,11 @@
   },
   "homepage": "https://github.com/KarlaKirchhoff/ImperioLimpeza_servidor#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^5.1.0"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.19",
     "@types/express": "^5.0.5",
     "nodemon": "^3.1.10",
     "ts-node": "^10.9.2",
